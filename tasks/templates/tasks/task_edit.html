@@ -1,0 +1,10 @@
+{% extends 'tasks/base.html'%}
+
+{% block content %}
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn-check" id="btn-check-2" checked autocomplete="off" value="Yes" class="box">
+        <label class="btn btn-primary" for="btn-check-2">Yes</label>
+
+</form>
+{% endblock %}

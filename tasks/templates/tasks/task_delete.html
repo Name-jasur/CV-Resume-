@@ -1,0 +1,17 @@
+{% extends 'tasks/base.html'%}
+
+{% block content %}
+<form method="post">{% csrf_token %}
+    <br>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Are you sure you want to delete this?!</strong> .
+        <input type="submit" class="btn-check" id="btn-check-2" checked autocomplete="off" value="Yes" class="box">
+        <label class="btn btn-primary" for="btn-check-2">Yes</label>
+<!--        <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+    </div>
+    <br>
+
+</form>
+{% endblock %}
