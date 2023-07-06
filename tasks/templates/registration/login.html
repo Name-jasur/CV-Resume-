@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--  <link rel="stylesheet" href="front.css">-->
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+{% extends '../tasks/base.html'%}
+
+{% block title %} Sign In{% endblock %}
+
+
+{% block content %}
+<form action="" method="post">
+  {% csrf_token %}
+<!--  {{ form.as_p }}-->
+  {% for field in form%}
+    <b><i>{{field.name}}</i></b> {{field}} <br> <br>
+  {% endfor %}
+  <button type="submit" class="box">Sign In</button>
+</form>
+{% endblock %}
+</body>
+</html>
